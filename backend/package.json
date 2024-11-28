@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "node ./dist/index.js",
   "scripts": {
-    "dev": "npx tsc -b && node ./dist/index.js"
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prestart": "npm run build",
+    "start": "nodemon .",
+    "dev": "npx concurrently  --kill-others \"npm run watch\" \" npm start\" "
   },
   "keywords": [],
   "author": "",
@@ -13,6 +17,8 @@
     "ws": "^8.18.0"
   },
   "devDependencies": {
-    "@types/ws": "^8.5.13"
+    "@types/ws": "^8.5.13",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2"
   }
 }
