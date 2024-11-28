@@ -1,8 +1,9 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "node ./dist/index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc",
     "watch": "tsc -w",
     "prestart": "npm run build",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@types/ws": "^8.5.13",
     "nodemon": "^3.1.7",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "tslint": "^5.20.1"
   }
 }

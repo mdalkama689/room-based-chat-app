@@ -1,0 +1,17 @@
+{
+  "extends": "tslint:recommended",
+  "defaultSeverity": "warning",
+  "rules": {
+    "no-console": {
+      "severity": "warning",
+      "options": ["debug", "info", "trace"]
+    },
+    "max-line-length": [true, 120], 
+    "semicolon": {
+      "options": ["always"]
+    },
+    "object-literal-sort-keys": false, 
+    "trailing-comma": [true, { "multiline": "always", "singleline": "never" }]
+  },
+  "jsRules": {}
+}
